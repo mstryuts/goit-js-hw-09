@@ -38,7 +38,7 @@ const timer = {
     start() {
 
     intervalId = setInterval(() => {
-    let deadlineDate = initDate - Date.now();
+    const deadlineDate = initDate - Date.now();
         
     if (deadlineDate <= 0) {
         clearInterval(intervalId);
