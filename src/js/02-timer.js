@@ -12,7 +12,7 @@ const secondsRef = document.querySelector('[data-seconds]');
 
 startBtn.disabled = true;
 
-let timerID = null;
+let intervalId = null;
 let initDate = null;
 
 const options = {
@@ -35,11 +35,11 @@ flatpickr(myInput, options);
 const timer = {
     start() {
 
-    timerId = setInterval(() => {
+    intervalId = setInterval(() => {
     let deadlineDate = initDate - Date.now();
         
     if (deadlineDate <= 0) {
-        clearInterval(timerId);
+        clearInterval(intervalId);
         Notiflix.Notify.success('BOOOOM!');
         return;
         };
