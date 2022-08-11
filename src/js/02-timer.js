@@ -10,6 +10,8 @@ const hoursRef = document.querySelector('[data-hours]');
 const minutesRef = document.querySelector('[data-minutes]');
 const secondsRef = document.querySelector('[data-seconds]');
 
+const DELAY = 1000;
+
 startBtn.disabled = true;
 
 let intervalId = null;
@@ -49,7 +51,7 @@ const timer = {
     hoursRef.textContent = timerInfo.hours;
     minutesRef.textContent = timerInfo.minutes;
     secondsRef.textContent = timerInfo.seconds;
-  }, 1000);
+  }, DELAY);
     }
 }
 
