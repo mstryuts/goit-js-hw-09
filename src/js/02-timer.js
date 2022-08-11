@@ -10,7 +10,7 @@ const hoursRef = document.querySelector('[data-hours]');
 const minutesRef = document.querySelector('[data-minutes]');
 const secondsRef = document.querySelector('[data-seconds]');
 
-startBtn.disabled = true
+startBtn.disabled = true;
 
 const options = {
   enableTime: true,
@@ -27,7 +27,7 @@ const options = {
     },
 };
 
-fp = flatpickr(myInput, options); 
+flatpickr(myInput, options); 
 
 const timer = {
     start() {
