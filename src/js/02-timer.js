@@ -12,18 +12,19 @@ const secondsRef = document.querySelector('[data-seconds]');
 
 startBtn.disabled = true;
 
+let timerID = null;
 let initDate = null;
 
 const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
-    minuteIncrement: 1,
-    onClose(selectedDates) {
-        initDate = selectedDates[0].getTime()
-     if (Date.now() > initDate) {
-            Notiflix.Notify.failure("Please choose a date in the future")
-            return;
+  minuteIncrement: 1,
+  onClose(selectedDates) {
+    initDate = selectedDates[0].getTime()
+    if (Date.now() > initDate) {
+        Notiflix.Notify.failure("Please choose a date in the future")
+        return;
         }
         startBtn.disabled = false
     },
