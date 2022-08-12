@@ -42,7 +42,7 @@ const timer = {
         
     if (deadlineDate <= 0) {
         clearInterval(intervalId);
-        Notiflix.Notify.success('BOOOOM!');
+        Notiflix.Notify.success('https://youtu.be/dQw4w9WgXcQ!');
         return;
         };
         
@@ -73,3 +73,5 @@ function addLeadingZero (value) {
     return String(value).padStart(2, '0');
 }
 startBtn.addEventListener('click', timer.start)
+
+
