@@ -42,11 +42,11 @@ const timer = {
         
     if (deadlineDate <= 0) {
         clearInterval(intervalId);
-        Notiflix.Notify.success('https://youtu.be/dQw4w9WgXcQ!');
+        Notiflix.Notify.success('https://youtu.be/dQw4w9WgXcQ');
         return;
         };
         
-    const timerInfo = convertMs(deadlineDate)
+      const timerInfo = convertMs(deadlineDate);
     daysRef.textContent = timerInfo.days;
     hoursRef.textContent = timerInfo.hours;
     minutesRef.textContent = timerInfo.minutes;
@@ -72,6 +72,6 @@ function convertMs(ms) {
 function addLeadingZero (value) {
     return String(value).padStart(2, '0');
 }
-startBtn.addEventListener('click', timer.start)
+startBtn.addEventListener('click', timer.start);
 
 
