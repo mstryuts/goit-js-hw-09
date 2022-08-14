@@ -12,7 +12,6 @@ const secondsRef = document.querySelector('[data-seconds]');
 
 const DELAY = 1000;
 
-startBtn.disabled = true;
 
 let intervalId = null;
 let initDate = null;
@@ -42,7 +41,7 @@ startBtn.disabled = true;
         
     if (deadlineDate <= 0) {
       clearInterval(intervalId);
-        Notiflix.Notify.success('https://youtu.be/dQw4w9WgXcQ');
+        Notiflix.Notify.success(`https://youtu.be/dQw4w9WgXcQ`);
         return;
         };
         
