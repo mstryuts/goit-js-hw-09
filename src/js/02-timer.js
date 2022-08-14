@@ -36,12 +36,12 @@ flatpickr(myInput, options);
 
 const timer = {
     start() {
-
+startBtn.disabled = true;
     intervalId = setInterval(() => {
     const deadlineDate = initDate - Date.now();
         
     if (deadlineDate <= 0) {
-        clearInterval(intervalId);
+      clearInterval(intervalId);
         Notiflix.Notify.success('https://youtu.be/dQw4w9WgXcQ');
         return;
         };
