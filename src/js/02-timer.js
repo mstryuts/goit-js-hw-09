@@ -73,4 +73,3 @@ function addLeadingZero (value) {
 }
 startBtn.addEventListener('click', timer.start);
 
-
